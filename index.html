@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fanta — La boisson pétillante aux saveurs de fruits explosives. Découvrez nos produits signature : Orange, CocaCola, Pepsi.">
+    <meta name="theme-color" content="#FF6B00">
+    <title>Fanta — L'Explosion de Saveurs | Boissons Premium</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== LOADER ===== -->
+    <div id="loader">
+        <div class="loader-inner">
+            <span class="loader-brand">FANTA</span>
+            <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- ===== CURSOR ===== -->
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <header>
+        <nav id="navbar" role="navigation" aria-label="Navigation principale">
+            <a href="#" class="nav-logo" aria-label="Fanta Home">
+                <span class="logo-text">FANTA</span>
+                <span class="logo-dot"></span>
+            </a>
+
+            <ul class="nav-links" id="nav-links" role="list">
+                <li><a href="#hero" class="nav-link active" id="nav-home">Accueil</a></li>
+                <li><a href="#about" class="nav-link" id="nav-about">À propos</a></li>
+                <li><a href="#products" class="nav-link" id="nav-products">Produits</a></li>
+                <li><a href="#contact" class="nav-link" id="nav-contact">Contact</a></li>
+            </ul>
+
+            <a href="#products" class="nav-cta" id="nav-shop-btn">
+                <i class="ri-shopping-bag-3-line"></i>
+                <span>Commander</span>
+            </a>
+
+            <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+            <a href="#hero" class="mobile-link" id="mob-home">Accueil</a>
+            <a href="#about" class="mobile-link" id="mob-about">À propos</a>
+            <a href="#products" class="mobile-link" id="mob-products">Produits</a>
+            <a href="#contact" class="mobile-link" id="mob-contact">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== HERO SECTION ===== -->
+        <section id="hero" class="hero-section" aria-label="Section héro Fanta">
+
+            <!-- Particle Canvas -->
+            <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+            <!-- Background Orbs -->
+            <div class="hero-orb orb-1" aria-hidden="true"></div>
+            <div class="hero-orb orb-2" aria-hidden="true"></div>
+            <div class="hero-orb orb-3" aria-hidden="true"></div>
+
+            <!-- Hero Content -->
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="ri-sparkling-2-fill"></i>
+                    <span>Nouvelle Saveur 2025</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line" data-text="FANTA">FANTA</span>
+                    <span class="title-sub">L'Explosion de Saveurs</span>
+                </h1>
+                <p class="hero-desc">La boisson pétillante qui éveille vos sens avec des saveurs de fruits authentiques. Pure. Vibrante. Irrésistible.</p>
+                <div class="hero-actions">
+                    <a href="#products" class="btn-primary" id="hero-cta-primary">
+                        <span>Découvrir</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                    <a href="#about" class="btn-ghost" id="hero-cta-ghost">
+                        <i class="ri-play-circle-line"></i>
+                        <span>Notre histoire</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="190">0</span><span>+</span>
+                        <span class="stat-label">Pays</span>
+                    </div>
+                    <div class="stat-divider" aria-hidden="true"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="1940">0</span>
+                        <span class="stat-label">Depuis</span>
+                    </div>
+                    <div class="stat-divider" aria-hidden="true"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="70">0</span><span>+</span>
+                        <span class="stat-label">Saveurs</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Visual -->
+            <div class="hero-visual" aria-hidden="true">
+                <div class="bottle-glow"></div>
+                <img id="hero-bottle" src="fanta.png" alt="Bouteille Fanta Orange" loading="eager">
+                <img id="hero-orange-big" src="orange.webp" alt="" loading="eager">
+                <img id="hero-orange-cut" src="orange2.png" alt="" loading="lazy">
+                <img id="hero-leaf1" src="leaf.webp" alt="" loading="lazy">
+                <img id="hero-leaf2" src="leaf2.png" alt="" loading="lazy">
+                <img id="hero-leaf3" src="coconoutleaf.png" alt="" loading="lazy">
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator" aria-label="Défiler vers le bas">
+                <div class="scroll-line"></div>
+                <span>Défiler</span>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT SECTION ===== -->
+        <section id="about" class="about-section" aria-label="À propos de Fanta">
+
+            <div class="about-bg-text" aria-hidden="true">FANTA</div>
+
+            <div class="about-container">
+                <div class="about-visual" aria-hidden="true">
+                    <div class="about-shape-ring"></div>
+                    <div class="about-shape-blob">
+                        <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="blob-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#FF6B00"/>
+                                    <stop offset="100%" style="stop-color:#FF3A00"/>
+                                </linearGradient>
+                            </defs>
+                            <path fill="url(#blob-gradient)" d="M41.5,-59.5C49.8,-51.1,49.7,-33.6,50.7,-19.2C51.7,-4.7,53.8,6.7,52.4,18.9C51.1,31.1,46.3,44.1,36.9,52.9C27.6,61.8,13.8,66.5,-2.5,70C-18.8,73.4,-37.7,75.6,-52.5,68.5C-67.3,61.5,-78.2,45.2,-84.5,27.1C-90.9,9,-92.7,-10.8,-80.5,-19.3C-68.3,-27.8,-42.1,-24.8,-26.3,-30.8C-10.6,-36.8,-5.3,-51.7,5.7,-59.5C16.6,-67.3,33.2,-68,41.5,-59.5Z" transform="translate(200 200)" />
+                        </svg>
+                    </div>
+                    <div class="about-bottle-wrap">
+                        <img src="fanta.png" alt="Fanta bottle" class="about-bottle-img">
+                    </div>
+                    <div class="about-floating-badge badge-1">
+                        <i class="ri-leaf-fill"></i>
+                        <span>100% Naturel</span>
+                    </div>
+                    <div class="about-floating-badge badge-2">
+                        <i class="ri-sparkling-fill"></i>
+                        <span>Pétillant</span>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <div class="section-label">
+                        <div class="label-line"></div>
+                        <span>Notre Histoire</span>
+                    </div>
+                    <h2 class="section-title">Une Saveur <em>Légendaire</em> depuis 1940</h2>
+                    <p class="about-text">Née en pleine Seconde Guerre mondiale, Fanta est devenue l'une des boissons les plus appréciées au monde. Avec ses saveurs fruitées intenses et sa pétillance caractéristique, chaque gorgée est une invitation à la joie.</p>
+                    <p class="about-text">Aujourd'hui présente dans plus de 190 pays avec plus de 70 saveurs différentes, Fanta continue d'innover pour éveiller vos sens et illuminer vos moments de partage.</p>
+
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="ri-drop-fill"></i>
+                            </div>
+                            <div>
+                                <h3>Saveurs Authentiques</h3>
+                                <p>Des fruits soigneusement sélectionnés</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="ri-recycle-fill"></i>
+                            </div>
+                            <div>
+                                <h3>Engagement Durable</h3>
+                                <p>Emballages 100% recyclables</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="ri-global-fill"></i>
+                            </div>
+                            <div>
+                                <h3>Présence Mondiale</h3>
+                                <p>Disponible dans 190+ pays</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PRODUCTS SECTION ===== -->
+        <section id="products" class="products-section" aria-label="Nos produits">
+
+            <div class="products-header">
+                <div class="section-label center-label">
+                    <div class="label-line"></div>
+                    <span>Notre Sélection</span>
+                    <div class="label-line"></div>
+                </div>
+                <h2 class="section-title center-title">Nos Boissons <em>Premium</em></h2>
+                <p class="products-subtitle">Découvrez notre gamme de boissons pétillantes aux saveurs inégalées</p>
+            </div>
+
+            <div class="products-grid">
+                <!-- Card: CocaCola -->
+                <article class="product-card card-cola" id="card-cocacola">
+                    <div class="card-glow"></div>
+                    <div class="card-inner">
+                        <div class="card-fruit-wrap">
+                            <img class="card-fruit" src="lemon.webp" alt="" aria-hidden="true">
+                        </div>
+                        <div class="card-bottle-wrap">
+                            <img class="card-bottle" src="cocacola.png" alt="Bouteille CocaCola">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-badge">Classique</span>
+                            <h3 class="card-title">Coca‑Cola</h3>
+                            <p class="card-desc">Le goût iconique qui traverse les générations. Pétillant, rafraîchissant, inoubliable.</p>
+                            <div class="card-meta">
+                                <span class="card-price">2.99€</span>
+                                <div class="card-rating">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-half-fill"></i>
+                                    <span>4.8</span>
+                                </div>
+                            </div>
+                            <button class="card-btn" id="btn-cocacola">
+                                <i class="ri-shopping-cart-2-line"></i>
+                                <span>Ajouter au panier</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card: Fanta (Featured) -->
+                <article class="product-card card-fanta featured-card" id="card-fanta">
+                    <div class="card-glow"></div>
+                    <div class="featured-ribbon">
+                        <i class="ri-sparkling-2-fill"></i> Best Seller
+                    </div>
+                    <div class="card-inner">
+                        <div class="card-bottle-wrap">
+                            <img class="card-bottle" src="fanta.png" alt="Bouteille Fanta Orange">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-badge fanta-badge">Signature</span>
+                            <h3 class="card-title">Fanta Orange</h3>
+                            <p class="card-desc">L'originale pétillante aux arômes d'orange naturels. La référence absolue en matière de rafraîchissement fruité.</p>
+                            <div class="card-meta">
+                                <span class="card-price">3.49€</span>
+                                <div class="card-rating">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <span>5.0</span>
+                                </div>
+                            </div>
+                            <button class="card-btn fanta-btn" id="btn-fanta">
+                                <i class="ri-shopping-cart-2-line"></i>
+                                <span>Ajouter au panier</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card: Pepsi -->
+                <article class="product-card card-pepsi" id="card-pepsi">
+                    <div class="card-glow"></div>
+                    <div class="card-inner">
+                        <div class="card-fruit-wrap right-fruit">
+                            <img class="card-fruit" src="lemon.webp" alt="" aria-hidden="true">
+                        </div>
+                        <div class="card-bottle-wrap">
+                            <img class="card-bottle" src="pepsi.png" alt="Bouteille Pepsi">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-badge">Populaire</span>
+                            <h3 class="card-title">Pepsi</h3>
+                            <p class="card-desc">La challenger audacieuse au goût distinctif et à la légèreté pétillante qui conquiert les palais.</p>
+                            <div class="card-meta">
+                                <span class="card-price">2.79€</span>
+                                <div class="card-rating">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-line"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                            <button class="card-btn" id="btn-pepsi">
+                                <i class="ri-shopping-cart-2-line"></i>
+                                <span>Ajouter au panier</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== BANNER SECTION ===== -->
+        <section class="banner-section" aria-label="Promotion">
+            <div class="banner-content">
+                <div class="banner-text-wrap">
+                    <h2 class="banner-title">Commandez en ligne,<br><em>livré chez vous</em></h2>
+                    <p class="banner-sub">Livraison express en 2h sur Paris et région parisienne. Minimum de commande : 15€.</p>
+                    <a href="#" class="btn-primary" id="banner-order-btn">
+                        <span>Commander maintenant</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+                <div class="banner-visual" aria-hidden="true">
+                    <img src="orange.webp" alt="" class="banner-orange-1">
+                    <img src="orange2.png" alt="" class="banner-orange-2">
+                    <img src="leaf.webp" alt="" class="banner-leaf">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT SECTION ===== -->
+        <section id="contact" class="contact-section" aria-label="Contact">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="section-label">
+                        <div class="label-line"></div>
+                        <span>Nous Contacter</span>
+                    </div>
+                    <h2 class="section-title">Une question ?<br><em>On vous répond.</em></h2>
+                    <p class="contact-desc">Notre équipe est disponible du lundi au vendredi, de 9h à 18h pour répondre à toutes vos questions.</p>
+                    <div class="contact-methods">
+                        <a href="mailto:contact@fanta.com" class="contact-method" id="contact-email">
+                            <div class="method-icon"><i class="ri-mail-line"></i></div>
+                            <div>
+                                <span>Email</span>
+                                <strong>contact@fanta.com</strong>
+                            </div>
+                        </a>
+                        <a href="tel:+33100000000" class="contact-method" id="contact-phone">
+                            <div class="method-icon"><i class="ri-phone-line"></i></div>
+                            <div>
+                                <span>Téléphone</span>
+                                <strong>+33 1 00 00 00 00</strong>
+                            </div>
+                        </a>
+                        <div class="contact-method">
+                            <div class="method-icon"><i class="ri-map-pin-line"></i></div>
+                            <div>
+                                <span>Adresse</span>
+                                <strong>Paris, France</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="#" class="social-btn" id="social-instagram" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                        <a href="#" class="social-btn" id="social-twitter" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+                        <a href="#" class="social-btn" id="social-facebook" aria-label="Facebook"><i class="ri-facebook-circle-line"></i></a>
+                        <a href="#" class="social-btn" id="social-tiktok" aria-label="TikTok"><i class="ri-tiktok-line"></i></a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form" novalidate aria-label="Formulaire de contact">
+                    <div class="form-group">
+                        <label for="contact-name">Nom complet</label>
+                        <div class="input-wrap">
+                            <i class="ri-user-3-line"></i>
+                            <input type="text" id="contact-name" name="name" placeholder="Jean Dupont" autocomplete="name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email-input">Adresse email</label>
+                        <div class="input-wrap">
+                            <i class="ri-mail-line"></i>
+                            <input type="email" id="contact-email-input" name="email" placeholder="jean@exemple.com" autocomplete="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-subject">Sujet</label>
+                        <div class="input-wrap">
+                            <i class="ri-chat-3-line"></i>
+                            <input type="text" id="contact-subject" name="subject" placeholder="Votre sujet..." required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <div class="input-wrap textarea-wrap">
+                            <i class="ri-pencil-line"></i>
+                            <textarea id="contact-message" name="message" placeholder="Votre message..." rows="5" required></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary form-submit" id="contact-submit">
+                        <span>Envoyer le message</span>
+                        <i class="ri-send-plane-2-line"></i>
+                    </button>
+                    <div class="form-feedback" id="form-feedback" aria-live="polite"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" aria-label="Pied de page">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <span class="footer-logo">FANTA</span>
+                <p>L'explosion de saveurs qui vous accompagne partout dans le monde depuis 1940.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram" id="foot-instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" aria-label="Twitter" id="foot-twitter"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#" aria-label="Facebook" id="foot-facebook"><i class="ri-facebook-circle-line"></i></a>
+                </div>
+            </div>
+            <div class="footer-links-group">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#hero" id="foot-home">Accueil</a></li>
+                    <li><a href="#about" id="foot-about">À propos</a></li>
+                    <li><a href="#products" id="foot-products">Produits</a></li>
+                    <li><a href="#contact" id="foot-contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-group">
+                <h4>Produits</h4>
+                <ul>
+                    <li><a href="#" id="foot-fanta">Fanta Orange</a></li>
+                    <li><a href="#" id="foot-cola">Coca-Cola</a></li>
+                    <li><a href="#" id="foot-pepsi">Pepsi</a></li>
+                    <li><a href="#" id="foot-new">Nouvelles Saveurs</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-group">
+                <h4>Légal</h4>
+                <ul>
+                    <li><a href="#" id="foot-privacy">Confidentialité</a></li>
+                    <li><a href="#" id="foot-terms">CGU</a></li>
+                    <li><a href="#" id="foot-cookies">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Fanta. Tous droits réservés. Conçu avec <i class="ri-heart-fill" style="color:#FF6B00"></i> par <strong>Antigravity</strong></p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast" role="alert" aria-live="assertive"></div>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
