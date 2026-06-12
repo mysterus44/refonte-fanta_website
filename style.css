@@ -436,7 +436,7 @@ header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; }
 
 .title-line {
   font-family: var(--font-display);
-  font-size: clamp(4.5rem, 10vw, 9rem);
+  font-size: clamp(3.5rem, 15vw, 9rem);
   font-weight: 800;
   line-height: 0.9;
   color: var(--white);
@@ -1732,28 +1732,32 @@ header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; }
     align-items: center;
   }
 
-  .about-section { padding: 5rem 5%; }
-  .about-bg-text { font-size: 30vw; }
-  .about-shape-ring { width: 260px; height: 260px; }
-  .about-shape-blob { width: 200px; height: 200px; }
-  .about-bottle-img { width: 140px; }
+  .about-section { padding: 4rem 1.5rem; }
+  .about-bg-text { font-size: 25vw; }
+  .about-shape-ring { width: 220px; height: 220px; }
+  .about-shape-blob { width: 180px; height: 180px; }
+  .about-bottle-img { width: 120px; }
 
-  .products-section { padding: 5rem 5%; }
+  .products-section { padding: 4rem 1.5rem; }
 
   .products-grid {
     grid-template-columns: 1fr;
-    max-width: 420px;
+    max-width: 100%;
     margin: 0 auto;
   }
 
-  .contact-section { padding: 5rem 5%; }
-  .contact-form { padding: 1.75rem; }
+  .card-inner { padding: 1.5rem 1.2rem; }
+  .card-title { font-size: clamp(1.2rem, 6vw, 1.8rem); word-break: break-word; }
 
-  .banner-content { padding: 2.5rem 1.5rem; }
+  .contact-section { padding: 4rem 1.5rem; }
+  .contact-form { padding: 1.5rem 1rem; }
+
+  .banner-content { padding: 2rem 1.25rem; }
+  .banner-title { font-size: clamp(1.5rem, 6vw, 2rem); }
 
   .footer-top {
     grid-template-columns: 1fr;
-    padding: 3rem 5% 2rem;
+    padding: 3rem 1.5rem 2rem;
   }
 
   .scroll-indicator { display: none; }
@@ -1762,5 +1766,11 @@ header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; }
 /* Very small screens */
 @media (max-width: 380px) {
   .stat-divider { display: none; }
-  .hero-stats { gap: 1rem; }
+  .hero-stats { gap: 1rem; flex-direction: column; align-items: flex-start; }
+  .hero-actions { width: 100%; }
+  .hero-actions .btn-primary, .hero-actions .btn-ghost { width: 100%; justify-content: center; }
+  
+  .nav-logo { padding: 0.4rem 0.8rem; }
+  .logo-text { font-size: 1.2rem; }
+  .hero-section { padding: 5rem 1.5rem 3rem; }
 }
