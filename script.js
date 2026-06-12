@@ -1,9 +1,4 @@
-/* ============================================================
-   FANTA — SCRIPT v2.0
-   Animations: GSAP · ScrollTrigger · Canvas Particles
-   Custom Cursor · Counter · Toast · Form Validation
-   Author: Antigravity
-   ============================================================ */
+
 
 'use strict';
 
